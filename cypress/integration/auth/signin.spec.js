@@ -1,6 +1,6 @@
 describe("Sign-in Page", () => {
     beforeEach(() => {
-        cy.visit('/signin');
+        cy.visit('signin');
     });
 
     it('Form Validation', () => {
@@ -16,7 +16,13 @@ describe("Sign-in Page", () => {
 
     it('Sign up link', () => {
         cy.get('[data-test="signup"]').click()
-        cy.url().should('contain', '/signup')        
+        cy.urlEqual('signup')
     });
-}) 
 
+    it('Login', () => {
+        cy.get('#username').type('AutoTester')
+        cy.get('#password').type('abc123')
+        cy.get('[data-test="signin-submit"]').should('be.enabled').click()
+        cy.urlEqual('')
+    });
+})
