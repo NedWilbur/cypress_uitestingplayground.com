@@ -25,11 +25,6 @@ declare global {
     namespace Cypress {
       interface Chainable {
         /**
-        * Login to AUT
-        */
-        login(): Chainable<Element>
-
-        /**
          * Validates URL. Automatically prepends baseUrl from config.
          * @param url url (excluding baseUrl)
          */
