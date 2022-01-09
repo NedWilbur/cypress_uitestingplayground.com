@@ -29,6 +29,12 @@ declare global {
          * @param url url (excluding baseUrl)
          */
         urlEqual(url :string): Chainable<Element>
+
+        /**
+         * Validates header equals @text
+         * @param text url (excluding baseUrl)
+         */
+         headerEqual(text :string): Chainable<Element>
       }
     }
   }

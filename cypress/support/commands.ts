@@ -23,3 +23,7 @@
 Cypress.Commands.add('urlEqual', url => {
     cy.url().should('equal', `${Cypress.config().baseUrl}${url}`)
 })
+
+Cypress.Commands.add('headerEqual', text => {
+    cy.get('h3').should('have.text', text)
+})

@@ -4,7 +4,7 @@ describe('Dynamic ID', () => {
     });
 
     it('Header', () => {
-        cy.get('h3').should('have.text', 'Dynamic ID')
+        cy.headerEqual('Dynamic ID')
     });
 
     it('Click Button', () => {

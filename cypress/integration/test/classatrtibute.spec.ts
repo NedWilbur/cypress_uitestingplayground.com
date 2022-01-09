@@ -1,10 +1,10 @@
-describe('Dynamic ID', () => {
+describe('Class Attribute', () => {
     beforeEach(() => {
         cy.visit('classattr');
     });
 
     it('Header', () => {
-        cy.get('h3').should('have.text', 'Class Attribute')
+        cy.headerEqual('Class Attribute')
     });
 
     it('Click Blue Button', () => {
